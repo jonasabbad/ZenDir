@@ -148,15 +148,30 @@ def main():
     parser.add_argument(
         '-p', '--path', 
         type=str, 
-        required=True, 
+        required=False, # Changed to False so it doesn't crash if path is missing
         help="Target directory to organize"
     )
     
     args = parser.parse_args()
-    target_path = Path(args.path).resolve()
+    
+    # Interactive prompt if path is not provided via CLI
+    input_path = args.path
+    if not input_path:
+        print("\n✨ Welcome to ZenDir! ✨")
+        input_path = input("📁 Please enter the full path of the folder to organize: ").strip('\"\' ')
+        
+    if not input_path:
+        logger.error("No directory provided. Exiting.")
+        return
+
+    target_path = Path(input_path).resolve()
     
     config = load_or_create_config()
     organize_directory(target_path, config)
+    
+    # Prevent the console window from closing immediately when run via double-click
+    if not args.path:
+        input("\nPress Enter to exit...")
 
 if __name__ == "__main__":
     main()
