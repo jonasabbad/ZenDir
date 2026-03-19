@@ -3,9 +3,7 @@
 ZenDir is a lightweight, automated file organizer that scans a target directory, categorizes files based on their extensions, moves them into appropriate subfolders, and automatically compresses extremely large files to save space.
 
 <div align="center">
-  <a href="https://www.buymeacoffee.com/jonasabbad" target="_blank">
-    <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=jonasabbad&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" alt="Buy Me A Coffee" />
-  </a>
+  <a href="https://www.buymeacoffee.com/jonasabbad" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 </div>
 
 ## Features
